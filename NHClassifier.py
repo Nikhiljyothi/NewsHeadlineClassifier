@@ -5,7 +5,7 @@ from sklearn.naive_bayes import MultinomialNB
 import pickle
 import streamlit as st
 
-bbc_text=pd.read_csv(r'F:\DUK Files\SEM 2\NLP-IR\NHClassifier\bbc-text.txt')
+bbc_text=pd.read_csv('bbc-text.txt')
 bbc_text=bbc_text.rename(columns={'text':'News_Headline'},inplace=False)
 bbc_text.category=bbc_text.category.map({'tech':0,'business':1,'sport':2,'entertainment':3,'politics':4})
 x=bbc_text.News_Headline
